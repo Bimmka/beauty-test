@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using UI.Notifications;
+using UISolution.Notifications;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.UI
+namespace UISolution.UI
 {
     public class NotificationDisplayer : MonoBehaviour
     {

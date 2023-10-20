@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.UI
+namespace UISolution.UI
 {
     public class NotificationElementView : MonoBehaviour
     {

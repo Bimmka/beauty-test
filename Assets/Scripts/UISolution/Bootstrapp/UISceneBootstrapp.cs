@@ -1,8 +1,8 @@
-using UI.Notifications;
-using UI.UI;
+using UISolution.Notifications;
+using UISolution.UI;
 using UnityEngine;
 
-namespace UI.Bootstrapp
+namespace UISolution.Bootstrapp
 {
     public class UISceneBootstrapp : MonoBehaviour
     {

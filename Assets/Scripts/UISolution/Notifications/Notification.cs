@@ -1,4 +1,4 @@
-﻿namespace UI.Notifications
+﻿namespace UISolution.Notifications
 {
     public class Notification
     {

@@ -1,3 +1,4 @@
+using CharacterSolution.Camera;
 using CharacterSolution.Character.Base;
 using CharacterSolution.Character.Data;
 using CharacterSolution.Character.Factory;
@@ -5,23 +6,26 @@ using CharacterSolution.CoroutineRunner;
 using CharacterSolution.Interrupt;
 using UnityEngine;
 
-public class CharacterSolutionBootstrapp : MonoBehaviour, ICoroutineRunner
+namespace CharacterSolution.Bootstrapp
 {
-    [SerializeField] private CharacterConfig _characterConfig;
-    [SerializeField] private CharacterView _characterView;
-    [SerializeField] private FollowCamera _camera;
-
-    private void Awake()
+    public class CharacterSolutionBootstrapp : MonoBehaviour, ICoroutineRunner
     {
-        CharacterFactory factory = new CharacterFactory(this, _characterView, _characterConfig);
+        [SerializeField] private CharacterConfig _characterConfig;
+        [SerializeField] private CharacterView _characterView;
+        [SerializeField] private FollowCamera _camera;
 
-        CharacterModel model = factory.Create();
-        model.Start();
+        private void Awake()
+        {
+            CharacterFactory factory = new CharacterFactory(this, _characterView, _characterConfig);
 
-        FollowCamera camera = Instantiate(_camera);
-        camera.SetTarget(model.ViewTransform);
+            CharacterModel model = factory.Create();
+            model.Start();
 
-        InterruptionChecker checker = new InterruptionChecker(this, model);
-        checker.StartCheck();
+            FollowCamera camera = Instantiate(_camera);
+            camera.SetTarget(model.ViewTransform);
+
+            InterruptionChecker checker = new InterruptionChecker(this, model);
+            checker.StartCheck();
+        }
     }
 }

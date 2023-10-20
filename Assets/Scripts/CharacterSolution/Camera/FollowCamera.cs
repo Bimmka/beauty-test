@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class FollowCamera : MonoBehaviour
+namespace CharacterSolution.Camera
 {
-   [SerializeField] private float _zOffset;
-   
-   private Transform _target;
-   public void SetTarget(Transform target)
+   public class FollowCamera : MonoBehaviour
    {
-      _target = target;
-   }
+      [SerializeField] private float _zOffset;
    
-   private void Update()
-   {
-      if (_target != null)
+      private Transform _target;
+      public void SetTarget(Transform target)
       {
-         transform.position = _target.position;
-         transform.position += Vector3.back * _zOffset;
+         _target = target;
+      }
+   
+      private void Update()
+      {
+         if (_target != null)
+         {
+            transform.position = _target.position;
+            transform.position += Vector3.back * _zOffset;
+         }
       }
    }
 }

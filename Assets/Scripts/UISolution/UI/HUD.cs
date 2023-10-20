@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.UI
+namespace UISolution.UI
 {
     public class HUD : MonoBehaviour
     {

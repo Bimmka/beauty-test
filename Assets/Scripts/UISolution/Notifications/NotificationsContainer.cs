@@ -1,11 +1,9 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace UI.Notifications
+namespace UISolution.Notifications
 {
     public class NotificationsContainer
     {
